@@ -38,7 +38,7 @@
 
     /* Image */
     .profile-card img {
-      width: 80%;
+      width: 60%;
       max-width: 200px;
       height: auto;
       border-radius: 50%;
@@ -47,7 +47,7 @@
     }
 
     .profile-card img:hover {
-      transform: scale(1.15);
+      transform: scale(1.05);
     }
 
     /* Heading */
@@ -84,7 +84,7 @@
 
     .profile-card a:hover {
       background-color: #ff4d4d;
-      transform: scale(1.05);
+      transform: scale(1.15);
     }
 
     /* Responsive tweaks */
@@ -99,14 +99,32 @@
         font-size: 15px;
       }
     }
+    .profile-card {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  60% { transform: translateY(-25px); }
+}
+.profile-audio {
+  width: 90%;                   /* full width of card */
+  border-radius: 15px;           /* rounded corners */
+  outline: none;                 /* remove default outline */
+  margin-top: 15px;              /* space from link above */
+}
   </style>
 </head>
 <body>
   <div class="profile-card">
     <img src="file_franki.png" alt="Franki's photo">
-    <h1>Hi, I'm Franki Whitmore</h1>
-    <p>I like web and app stuff. This is my first page, just for demo, trying to learn web designing.</p>
+    <h1>Hi, I'm Franki Whitmore </h1>
+    <p>I like web and app stuff . This is my first page, just for demo, trying to learn web designing.</p>
     <a href="https://www.instagram.com/franki_whitmore?igsh=bGdlMWlwMzJ0bDgz">Instagram ID</a>
+    <audio controls class="profile-audio">
+  <source src="Don Quixote Doflamingo.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
   </div>
 </body>
 </html>
