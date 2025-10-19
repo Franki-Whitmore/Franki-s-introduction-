@@ -2,79 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Franki — About</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-<body>
-  <h1>Hi, I'm Franki Whitmore</h1>
-  <p>I like web and app stuff. This is my first page. just for demo, trying to learn web designing </p>
-  <img src="file_franki.png" alt="Franki's photo" style="width:200px">
-  <p><a href="https://www.instagram.com/franki_whitmore?igsh=bGdlMWlwMzJ0bDgz">Instagram ID</a></p>
-  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Franki — About</title>
 
   <style>
+    /* Body styling */
     body {
-      background-color: #d8d8d8ff;     /* page background */
-      font-family: Arial, sans-serif; /* text style */
-      text-align: center;             /* center all text */
-      color: #222;                    /* text color */
+      background: linear-gradient(to bottom, #d8d8d8, #ffffff);
+      font-family: 'Arial', sans-serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
-    h1 {
-      color: #000000ff;                 /* heading color (blue) */
+    /* Profile Card */
+    .profile-card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      padding: 40px 30px;
+      max-width: 360px;
+      width: 90%;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    p {
-      font-size: 18px;                /* bigger text */
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.3);
     }
 
-    a {
-      color: #c20000;                 /* link color */
+    /* Image */
+    .profile-card img {
+      width: 80%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-card img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Heading */
+    .profile-card h1 {
+      color: #000;
+      font-size: 26px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Paragraph */
+    .profile-card p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+
+    .profile-card p:hover {
+      color: #1e90ff;
+    }
+
+    /* Instagram button */
+    .profile-card a {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #c20000;
+      color: #fff;
+      border-radius: 25px;
       text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    a:hover {
-      text-decoration: underline;     /* underline when touched */
+    .profile-card a:hover {
+      background-color: #ff4d4d;
+      transform: scale(1.05);
     }
-    img:hover {
-  transform: scale(1.15); /* slightly zooms in when touched */
-  transition: transform 0.3s ease;
-}
-img {
-  width: 200px;        /* keep your image size */
-  height: auto;        /* maintain aspect ratio */
-  border-radius: 50%;  /* make it circular for style */
-  margin: 20px 0;      /* space above and below */
-}
 
-p {
-  line-height: 1.6;    /* more readable paragraph */
-}
-a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #c20000;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-a:hover {
-  background-color: #ff4d4d;
-}
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  max-width: 500px;       /* limits content width on large screens */
-  margin: 0 auto;          /* centers content horizontally */
-  padding: 10px;           /* space around content */
-}
-
-img {
-  width: 80%;              /* image scales with screen */
-  max-width: 200px;        /* but never bigger than 200px */
-  height: auto;
-}
+    /* Responsive tweaks */
+    @media(max-width: 400px) {
+      .profile-card {
+        padding: 30px 20px;
+      }
+      .profile-card h1 {
+        font-size: 22px;
+      }
+      .profile-card p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="file_franki.png" alt="Franki's photo">
+    <h1>Hi, I'm Franki 😎</h1>
+    <p>I like web and app stuff 🚀. This is my first page, just for demo, trying to learn web designing.</p>
+    <a href="https://www.instagram.com/franki_whitmore?igsh=bGdlMWlwMzJ0bDgz">Instagram ID</a>
+  </div>
+</body>
+</html>
